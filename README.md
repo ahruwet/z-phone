@@ -1,30 +1,3 @@
-# Z-Phone
-
-**Z-Phone**, Modify Add Share location in chat and add location for App service
-<table>
-   <tbody>
-      <tr>
-         <td align="center" valign="top">
-            <a href="https://github.com/ahruwet"
-                style="text-decoration: none;"
-               ><img
-               src="https://avatars.githubusercontent.com/u/85060725?v=4"
-               width="50px"
-               alt="Aurindra Maulidzar"
-               /><br /><sub><b>ahruwet</b></sub></a>
-         </td>
-      </tr>
-   </tbody>
-</table>
-
-<h1 align="center">Z-PHONE</h1>
-<div align="center">
-
-| ![Image 1](https://i.imgur.com/eYiHbSS.png) | ![Image 2](https://i.imgur.com/bKkunQY.png) | ![Image 3](https://i.imgur.com/EbK3Vsf.png) |
-|-------------------------------------------|-------------------------------------------|-------------------------------------------|
-
-</div>
-
 ## Author
 
 <table>
@@ -42,6 +15,37 @@
       </tr>
    </tbody>
 </table>
+
+**Z-Phone**, Modify Add Share location in chat and add location for App service
+<table align="center">
+   <tbody>
+      <tr>
+         <td align="center" valign="top">
+            <a href="https://github.com/ahruwet" style="text-decoration: none;">
+               <img
+                  src="https://avatars.githubusercontent.com/u/85060725?v=4"
+                  width="100px"
+                  style="border-radius: 50%; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);"
+                  alt="Aurindra Maulidzar"
+               />
+               <br />
+               <sub>
+                  <b style="font-size: 14px; color: #333;">Aurindra Maulidzar</b>
+               </sub>
+            </a>
+         </td>
+      </tr>
+   </tbody>
+</table>
+
+
+<h1 align="center">Z-PHONE</h1>
+<div align="center">
+
+| ![Image 1](https://i.imgur.com/eYiHbSS.png) | ![Image 2](https://i.imgur.com/bKkunQY.png) | ![Image 3](https://i.imgur.com/EbK3Vsf.png) |
+|-------------------------------------------|-------------------------------------------|-------------------------------------------|
+
+</div>
 
 
 ## To USE

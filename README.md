@@ -16,7 +16,9 @@
    </tbody>
 </table>
 
+<div align="center">
 **Z-Phone**, Modify Add Share location in chat and add location for App service
+</div>
 <table align="center">
    <tbody>
       <tr>

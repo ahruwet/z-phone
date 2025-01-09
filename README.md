@@ -16,9 +16,9 @@
    </tbody>
 </table>
 
-<div align="center">
-**Z-Phone**, Modify Add Share location in chat and add location for App service
-</div>
+<h1 align="center">Z-PHONE</h1>
+<h2 align="center">Modify Add Share location in chat and add location for App service</h2>
+
 <table align="center">
    <tbody>
       <tr>
@@ -40,8 +40,6 @@
    </tbody>
 </table>
 
-
-<h1 align="center">Z-PHONE</h1>
 <div align="center">
 
 | ![Image 1](https://i.imgur.com/eYiHbSS.png) | ![Image 2](https://i.imgur.com/bKkunQY.png) | ![Image 3](https://i.imgur.com/EbK3Vsf.png) |

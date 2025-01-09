@@ -17,10 +17,14 @@
    </tbody>
 </table>
 
+<h1 align="center">Z-PHONE</h1>
+<div align="center">
 
-## Objective
+![2-1](https://imgur.com/eYiHbSS)
+![2-1](https://imgur.com/bKkunQY)
+![2-1](https://imgur.com/EbK3Vsf)
 
-Our goal is to create a visually appealing and user-friendly phone interface that enhances the gameplay experience without overwhelming players. By focusing on essential features and an intuitive layout, we hope to make communication in the game more enjoyable and immersive.
+</div>
 
 ## Inspiration
 

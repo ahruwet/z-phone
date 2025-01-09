@@ -52,6 +52,68 @@
 
 ## To USE
 
+**State for dead and revive**
+```lua
+-- OTHERS CODE
+function OnPlayerDeath()
+    isDead = true
+    ESX.UI.Menu.CloseAll()
+    local ped = PlayerPedId()
+    local coords = GetEntityCoords(ped)
+    local formattedCoords = {
+        x = ESX.Math.Round(coords.x, 1),
+        y = ESX.Math.Round(coords.y, 1),
+        z = ESX.Math.Round(coords.z, 1)
+    }
+    ESX.SetPlayerData('lastPosition', formattedCoords)
+    ClearTimecycleModifier()
+    SetTimecycleModifier("REDMIST_blend")
+    SetTimecycleModifierStrength(0.7)
+    SetExtraTimecycleModifier("fp_vig_red")
+    SetExtraTimecycleModifierStrength(1.0)
+    SetPedMotionBlur(PlayerPedId(), true)
+    TriggerServerEvent('esx_ambulancejob:setDeathStatus', true)
+    StartDeathTimer()
+    StartDeathCam()
+    StartDistressSignal()
+    ClearPedTasksImmediately(PlayerPedId())
+    exports['pma-voice']:removePlayerFromRadio()
+    exports["pma-voice"]:setVoiceProperty("radioEnabled", false)
+    exports["z-phone"]:setStatedead(true)
+end
+-- OTHERS CODE
+RegisterNetEvent('esx_ambulancejob:revive', function()
+    local playerPed = PlayerPedId()
+    local coords = GetEntityCoords(playerPed)
+    TriggerServerEvent('esx_ambulancejob:setDeathStatus', false)
+
+    DoScreenFadeOut(800)
+
+    while not IsScreenFadedOut() do
+        Wait(50)
+    end
+
+    local formattedCoords = {x = ESX.Math.Round(coords.x, 1), y = ESX.Math.Round(coords.y, 1), z = ESX.Math.Round(coords.z, 1)}
+
+    RespawnPed(playerPed, formattedCoords, 0.0)
+    isDead = false
+    ClearTimecycleModifier()
+    SetPedMotionBlur(playerPed, false)
+    ClearExtraTimecycleModifier()
+    EndDeathCam()
+    DoScreenFadeIn(800)
+    TriggerEvent('esx_basicneeds:resetStatus')
+    Wait(2000)
+    loadAnimDict("random@crash_rescue@help_victim_up") 
+    TaskPlayAnim( PlayerPedId(), "random@crash_rescue@help_victim_up", "helping_victim_to_feet_victim", 8.0, 1.0, -1, 49, 0, 0, 0, 0 )
+    Wait(3000)
+    ClearPedSecondaryTask(PlayerPedId())
+    ClearPedTasksImmediately(PlayerPedId())
+    exports["z-phone"]:setStatedead(false)
+end)
+-- OTHERS CODE
+```
+
 **Connect with ambulance job WITH NO USE INET**
 
 ```lua

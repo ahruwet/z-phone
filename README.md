@@ -20,9 +20,9 @@
 <h1 align="center">Z-PHONE</h1>
 <div align="center">
 
-![2-1](https://imgur.com/eYiHbSS)
-![2-1](https://imgur.com/bKkunQY)
-![2-1](https://imgur.com/EbK3Vsf)
+| ![Image 1](https://imgur.com/eYiHbSS) | ![Image 2](https://imgur.com/bKkunQY) | ![Image 3](https://imgur.com/EbK3Vsf) |
+|---------------------------------------|---------------------------------------|---------------------------------------|
+
 
 </div>
 

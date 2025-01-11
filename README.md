@@ -164,3 +164,23 @@ function SendDistressSignal()
 end
 -- OTHERS CODE
 ```
+
+**Add this if your ox_inventory doesn't have has item function**
+```lua
+--OTHERS CODE
+local function HasItem(itemName, itemAmount)
+	if itemName and itemAmount then
+		local count = exports.ox_inventory:Search('count', itemName:lower())
+		if type(count) == 'table' then
+			local newCount = count[itemName:upper()]
+			if newCount >= itemAmount then return true end
+		else
+			if count >= itemAmount then return true end
+		end
+	end
+	
+    return false
+end
+exports('HasItem', HasItem)
+--OTHERS CODE
+```

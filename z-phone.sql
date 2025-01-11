@@ -209,18 +209,19 @@ CREATE TABLE `zp_photos`  (
 -- Table structure for zp_service_messages
 -- ----------------------------
 DROP TABLE IF EXISTS `zp_service_messages`;
-CREATE TABLE `zp_service_messages`  (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `citizenid` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `solved_by_citizenid` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
-  `service` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `message` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp,
-  `solved_reason` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+CREATE TABLE `zp_service_messages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `citizenid` varchar(100) NOT NULL,
+  `solved_by_citizenid` varchar(50) DEFAULT NULL,
+  `service` varchar(255) NOT NULL,
+  `lokasi` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `solved_reason` text NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  INDEX `service`(`service` ASC) USING BTREE,
-  INDEX `service_solved_by_citizenid`(`solved_by_citizenid` ASC, `service` ASC) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+  KEY `service` (`service`) USING BTREE,
+  KEY `service_solved_by_citizenid` (`solved_by_citizenid`,`service`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Table structure for zp_tweet_comments

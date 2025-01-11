@@ -165,7 +165,7 @@ end
 -- OTHERS CODE
 ```
 
-**Add this if your ox_inventory doesn't have has item function**
+**Add this if your ox_inventory doesn't have export has item function**
 ```lua
 --OTHERS CODE
 local function HasItem(itemName, itemAmount)
